@@ -2,39 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Finance Management System Design System
+All colors MUST be HSL. Professional fintech aesthetic with trust-inspiring colors.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Finance-focused color palette */
+    --background: 220 15% 97%;
+    --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Professional finance blue */
+    --primary: 217 91% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 50%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Trust gray */
+    --secondary: 220 10% 95%;
+    --secondary-foreground: 220 15% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 10% 96%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Growth green */
+    --accent: 142 71% 45%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 142 71% 85%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success/Growth colors */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+    
+    /* Warning: Attention amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 35%;
+
+    /* Finance-specific design tokens */
+    --finance-blue: 217 91% 35%;
+    --finance-blue-light: 217 91% 85%;
+    --growth-green: 142 71% 45%;
+    --growth-green-light: 142 71% 85%;
+    --expense-red: 0 84% 60%;
+    --expense-red-light: 0 84% 85%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 35%), hsl(217 91% 50%));
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 60%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 10% 98%));
+    
+    /* Shadows */
+    --shadow-finance: 0 4px 20px -2px hsl(217 91% 35% / 0.1);
+    --shadow-card: 0 2px 10px -2px hsl(220 15% 15% / 0.1);
+    --shadow-success: 0 4px 20px -2px hsl(142 71% 45% / 0.15);
 
     --radius: 0.5rem;
 

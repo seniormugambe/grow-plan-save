@@ -22,6 +22,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -38,6 +39,7 @@ export default {
         accent: {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
+          light: "hsl(var(--accent-light))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -46,6 +48,26 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        finance: {
+          blue: "hsl(var(--finance-blue))",
+          "blue-light": "hsl(var(--finance-blue-light))",
+        },
+        growth: {
+          green: "hsl(var(--growth-green))",
+          "green-light": "hsl(var(--growth-green-light))",
+        },
+        expense: {
+          red: "hsl(var(--expense-red))",
+          "red-light": "hsl(var(--expense-red-light))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -57,6 +79,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        "gradient-primary": "var(--gradient-primary)",
+        "gradient-success": "var(--gradient-success)",
+        "gradient-card": "var(--gradient-card)",
+      },
+      boxShadow: {
+        "finance": "var(--shadow-finance)",
+        "card": "var(--shadow-card)",
+        "success": "var(--shadow-success)",
       },
       borderRadius: {
         lg: "var(--radius)",
