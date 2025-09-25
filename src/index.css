@@ -3,126 +3,160 @@
 @tailwind utilities;
 
 /* Finance Management System Design System
-All colors MUST be HSL. Professional fintech aesthetic with trust-inspiring colors.
+Premium fintech aesthetic with beautiful light and dark themes
 */
 
 @layer base {
   :root {
-    /* Finance-focused color palette */
-    --background: 220 15% 97%;
-    --foreground: 220 15% 15%;
+    /* Light Theme - Clean & Professional */
+    --background: 0 0% 100%;
+    --foreground: 222 15% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 15%;
+    --card-foreground: 222 15% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 15%;
+    --popover-foreground: 222 15% 12%;
 
-    /* Primary: Professional finance blue */
-    --primary: 217 91% 35%;
+    /* Primary: Modern finance blue with depth */
+    --primary: 217 91% 60%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 91% 50%;
+    --primary-glow: 217 91% 70%;
 
-    /* Secondary: Trust gray */
-    --secondary: 220 10% 95%;
-    --secondary-foreground: 220 15% 25%;
+    /* Secondary: Sophisticated neutral */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 222 15% 25%;
 
-    --muted: 220 10% 96%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 210 20% 97%;
+    --muted-foreground: 215 16% 47%;
 
-    /* Accent: Growth green */
-    --accent: 142 71% 45%;
+    /* Accent: Premium emerald for growth */
+    --accent: 158 64% 52%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 142 71% 85%;
+    --accent-light: 158 64% 90%;
 
-    /* Success/Growth colors */
-    --success: 142 71% 45%;
+    /* Success: Vibrant growth green */
+    --success: 142 76% 36%;
     --success-foreground: 0 0% 100%;
     
-    /* Warning: Attention amber */
-    --warning: 38 92% 50%;
+    /* Warning: Warm amber */
+    --warning: 32 95% 44%;
     --warning-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
+    /* Destructive: Refined red */
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 35%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
 
     /* Finance-specific design tokens */
-    --finance-blue: 217 91% 35%;
-    --finance-blue-light: 217 91% 85%;
-    --growth-green: 142 71% 45%;
-    --growth-green-light: 142 71% 85%;
-    --expense-red: 0 84% 60%;
-    --expense-red-light: 0 84% 85%;
+    --finance-blue: 217 91% 60%;
+    --finance-blue-light: 217 91% 95%;
+    --growth-green: 142 76% 36%;
+    --growth-green-light: 142 76% 90%;
+    --expense-red: 0 72% 51%;
+    --expense-red-light: 0 72% 95%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(217 91% 35%), hsl(217 91% 50%));
-    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(142 71% 60%));
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 10% 98%));
+    /* Enhanced gradients with depth */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 70%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%) 0%, hsl(142 76% 46%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-background: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 99%) 100%);
     
-    /* Shadows */
-    --shadow-finance: 0 4px 20px -2px hsl(217 91% 35% / 0.1);
-    --shadow-card: 0 2px 10px -2px hsl(220 15% 15% / 0.1);
-    --shadow-success: 0 4px 20px -2px hsl(142 71% 45% / 0.15);
+    /* Premium shadows */
+    --shadow-finance: 0 8px 32px -8px hsl(217 91% 60% / 0.2);
+    --shadow-card: 0 4px 16px -4px hsl(222 15% 12% / 0.08);
+    --shadow-success: 0 8px 32px -8px hsl(142 76% 36% / 0.2);
+    --shadow-elevated: 0 12px 48px -12px hsl(222 15% 12% / 0.12);
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar */
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 222 15% 25%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 95%;
+    --sidebar-accent-foreground: 222 15% 25%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Dark Theme - Sophisticated & Modern */
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 47% 11%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    /* Primary: Bright blue for dark mode */
+    --primary: 217 91% 70%;
+    --primary-foreground: 222 47% 11%;
+    --primary-glow: 217 91% 80%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    /* Secondary: Rich dark surface */
+    --secondary: 217 32% 17%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    /* Accent: Bright emerald for dark mode */
+    --accent: 158 64% 62%;
+    --accent-foreground: 222 47% 11%;
+    --accent-light: 158 64% 20%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success: Bright growth green */
+    --success: 142 76% 46%;
+    --success-foreground: 222 47% 11%;
+    
+    /* Warning: Bright amber */
+    --warning: 32 95% 54%;
+    --warning-foreground: 222 47% 11%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Destructive: Bright red */
+    --destructive: 0 72% 61%;
+    --destructive-foreground: 222 47% 11%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 217 91% 70%;
+
+    /* Finance-specific dark tokens */
+    --finance-blue: 217 91% 70%;
+    --finance-blue-light: 217 91% 20%;
+    --growth-green: 142 76% 46%;
+    --growth-green-light: 142 76% 20%;
+    --expense-red: 0 72% 61%;
+    --expense-red-light: 0 72% 20%;
+    
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 70%) 0%, hsl(217 91% 80%) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 46%) 0%, hsl(142 76% 56%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(222 47% 11%) 0%, hsl(217 32% 15%) 100%);
+    --gradient-background: linear-gradient(180deg, hsl(222 47% 11%) 0%, hsl(217 32% 13%) 100%);
+    
+    /* Dark mode shadows with glow effects */
+    --shadow-finance: 0 8px 32px -8px hsl(217 91% 70% / 0.3);
+    --shadow-card: 0 4px 16px -4px hsl(0 0% 0% / 0.2);
+    --shadow-success: 0 8px 32px -8px hsl(142 76% 46% / 0.3);
+    --shadow-elevated: 0 12px 48px -12px hsl(0 0% 0% / 0.3);
+
+    /* Dark sidebar */
+    --sidebar-background: 217 32% 15%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 70%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 32% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 32% 17%;
+    --sidebar-ring: 217 91% 70%;
   }
 }
 
@@ -133,5 +167,292 @@ All colors MUST be HSL. Professional fintech aesthetic with trust-inspiring colo
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: var(--gradient-background);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Enhanced scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+
+  /* Dark mode scrollbar */
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/40;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/60;
+  }
+}
+
+@layer components {
+  /* Enhanced card styles */
+  .card-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .card-interactive {
+    @apply transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .card-interactive:hover {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  /* Gradient text effects */
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    @apply bg-clip-text text-transparent;
+  }
+
+  .text-gradient-success {
+    background: var(--gradient-success);
+    @apply bg-clip-text text-transparent;
+  }
+
+  /* Enhanced button styles */
+  .btn-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .btn-glow::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent;
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+
+  .btn-glow:hover::before {
+    transform: translateX(100%);
+  }
+
+  /* Glass morphism effect */
+  .glass {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20;
+  }
+
+  .dark .glass {
+    @apply bg-black/10 border-white/10;
+  }
+
+  /* Animated background patterns */
+  .pattern-dots {
+    background-image: radial-gradient(circle, hsl(var(--muted-foreground) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .pattern-grid {
+    background-image: 
+      linear-gradient(hsl(var(--muted-foreground) / 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--muted-foreground) / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  /* Loading animations */
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from {
+      box-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+    }
+    to {
+      box-shadow: 0 0 40px hsl(var(--primary) / 0.8);
+    }
+  }
+
+  /* Smooth transitions for theme switching */
+  * {
+    transition: 
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  /* Enhanced focus states */
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  /* Wallet specific styles */
+  .wallet-card {
+    background: var(--gradient-card);
+    box-shadow: var(--shadow-card);
+    @apply border border-border/50 transition-all duration-300;
+  }
+
+  .wallet-card:hover {
+    box-shadow: var(--shadow-finance);
+    @apply border-primary/20;
+  }
+
+  .dark .wallet-card {
+    @apply border-border/30;
+  }
+
+  .dark .wallet-card:hover {
+    @apply border-primary/30;
+  }
+
+  /* Chart container enhancements */
+  .recharts-wrapper {
+    @apply rounded-lg;
+  }
+
+  .recharts-cartesian-grid-horizontal line,
+  .recharts-cartesian-grid-vertical line {
+    @apply stroke-border;
+  }
+
+  .recharts-tooltip-wrapper {
+    @apply rounded-lg shadow-elevated;
+  }
+
+  /* Status indicators */
+  .status-positive {
+    @apply text-success bg-success/10 border border-success/20;
+  }
+
+  .status-negative {
+    @apply text-expense-red bg-expense-red/10 border border-expense-red/20;
+  }
+
+  .status-neutral {
+    @apply text-primary bg-primary/10 border border-primary/20;
+  }
+
+  /* Enhanced typography */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 0.5s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.3s ease-out;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Responsive text sizes */
+  .text-responsive-xl {
+    @apply text-xl sm:text-2xl lg:text-3xl;
+  }
+
+  .text-responsive-lg {
+    @apply text-lg sm:text-xl lg:text-2xl;
+  }
+
+  .text-responsive-base {
+    @apply text-sm sm:text-base lg:text-lg;
   }
 }
