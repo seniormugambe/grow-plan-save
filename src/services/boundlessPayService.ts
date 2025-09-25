@@ -89,6 +89,49 @@ export class BoundlessPayService {
     return this.config !== null && this.config.apiKey.length > 0;
   }
 
+  isInitialized(): boolean {
+    return this.isConfigured();
+  }
+
+  async initialize(config: Partial<BoundlessPayConfig>): Promise<boolean> {
+    try {
+      const fullConfig: BoundlessPayConfig = {
+        apiKey: config.apiKey || '',
+        merchantId: config.merchantId || '',
+        environment: config.environment || 'sandbox',
+        enabledFeatures: {
+          payments: true,
+          subscriptions: true,
+          refunds: true,
+          analytics: true,
+        },
+        paymentMethods: {
+          creditCard: true,
+          debitCard: true,
+          bankTransfer: true,
+          digitalWallet: true,
+          cryptocurrency: true,
+        },
+        security: {
+          twoFactorAuth: true,
+          encryptionLevel: 'enhanced',
+          fraudDetection: true,
+        },
+        notifications: {
+          email: true,
+          sms: false,
+          webhook: true,
+        },
+      };
+
+      await this.saveConfig(fullConfig);
+      return true;
+    } catch (error) {
+      console.error('Failed to initialize Boundless Pay:', error);
+      return false;
+    }
+  }
+
   async processPayment(amount: number, currency: string, paymentMethod: string): Promise<BoundlessPayTransaction> {
     if (!this.isConfigured()) {
       throw new Error('Boundless Pay not configured');
