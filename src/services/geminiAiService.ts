@@ -46,11 +46,21 @@ export class GeminiFinancialAdvisor {
     try {
       // Try to get API key from localStorage first, then environment variables
       const apiKey = localStorage.getItem('gemini_api_key') || 
-                     import.meta.env.VITE_GEMINI_API_KEY || 
-                     process.env.VITE_GEMINI_API_KEY;
+                     import.meta.env.VITE_GEMINI_API_KEY;
+      
+      console.log('Checking API key availability:', {
+        hasLocalStorage: !!localStorage.getItem('gemini_api_key'),
+        hasEnvVar: !!import.meta.env.VITE_GEMINI_API_KEY,
+        apiKeyLength: apiKey ? apiKey.length : 0
+      });
       
       if (!apiKey) {
         console.warn('Gemini API key not found. Using fallback responses.');
+        return;
+      }
+
+      if (apiKey.length < 10) {
+        console.error('Invalid API key length. Please check your Gemini API key.');
         return;
       }
 
@@ -65,9 +75,20 @@ export class GeminiFinancialAdvisor {
         },
       });
 
-      console.log('Gemini AI initialized successfully');
+      console.log('Gemini AI initialized successfully with model: gemini-1.5-flash');
+      
+      // Test the connection
+      try {
+        const testResult = await this.model.generateContent("Test connection");
+        console.log('Gemini API connection test successful');
+      } catch (testError) {
+        console.error('Gemini API connection test failed:', testError);
+        this.model = null; // Reset model if connection fails
+      }
+      
     } catch (error) {
       console.error('Failed to initialize Gemini AI:', error);
+      this.model = null;
     }
   }
 
